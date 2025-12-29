@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
+# React UI Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+This project is a small React UI component library implemented with Storybook.  
+The goal is to demonstrate the ability to create **controlled components**, **Toast**, **Input with password toggle and clearable option**, and **Sidebar Menu with nested items**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 How to Run
 
-## React Compiler
+1. Clone the repository:
+```bash
+git clone https://github.com/yurikorock/react-ui-library.git
+cd react-ui-library
+Install dependencies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Install dependencies:
+npm install
+Run Storybook:
 
-## Expanding the ESLint configuration
+3. Run Storybook:
+npm run storybook
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🧩 Components
+1️⃣ Input
+Supports types: text, password, number
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Options:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+clearable — clear button
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+👁 password toggle
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Storybook shows all states
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Examples: "./screenshots/input-clearable-1.png", "./screenshots/input-clearable-2.png", "./screenshots/input-passwod-hide.png", "./screenshots/input-passwor-visible.png", "./screenshots/input-text.png"
+
+
+2️⃣ Toast
+Supports types: success | error | info | warning
+
+Auto-dismiss after duration
+
+Optional close button
+
+Smooth animation (fade/slide)
+
+Examples: "./screenshots/toast-error.png", "./screenshots/toast-info.png", "./screenshots/toast-success.png" 
+
+
+3️⃣ Sidebar Menu
+Slides in from the right
+
+Supports nested items (accordion)
+
+Overlay closes menu when clicked
+
+Controlled via isOpen + onClose
+
+Examples: "./screenshots/sidebar-1.png", "./screenshots/sidebar-2.png"
+
+
+⚙️ Technical Details
+React + TypeScript
+
+Storybook for component demonstration
+
+CSS Modules for styling
+
+Optional chaining for safe function calls (onClose?.())
+
+📦 Project Structure
+
+src/
+├── components/
+│   ├── Input/
+│   ├── SidebarMenu/
+│   └── Toast/
+├── stories/
+└── main.tsx
+screenshots/
+└── *.png
