@@ -19,7 +19,7 @@ export const Info: Story = {
       <>
         {visible && (
           <Toast
-            message="This is infotoast"
+            message="Info message"
             onClose={() => setVisible(false)}
             showCloseButton
           />
