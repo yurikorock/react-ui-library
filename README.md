@@ -2,86 +2,101 @@
 
 ## Project Overview
 This project is a small React UI component library implemented with Storybook.  
-The goal is to demonstrate the ability to create **controlled components**, **Toast**, **Input with password toggle and clearable option**, and **Sidebar Menu with nested items**.
+The goal is to demonstrate the ability to create **controlled components**, **Toast notifications**, **Input with password toggle and clearable option**, and **Sidebar Menu with nested items**.
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone the repository:
+Clone the repository:
 ```bash
 git clone https://github.com/yurikorock/react-ui-library.git
 cd react-ui-library
+```
+
 Install dependencies:
-
-2. Install dependencies:
+```bash
 npm install
+```
+
 Run Storybook:
-
-3. Run Storybook:
+```bash
 npm run storybook
+```
 
+---
 
-🧩 Components
-1️⃣ Input
-Supports types: text, password, number
+## 🧩 Components
 
-Options:
+### Input
+Supports input types:
+- `text`
+- `password`
+- `number`
 
-clearable — clear button
+Features:
+- Clearable input
+- Password visibility toggle
+- Fully controlled component
+- All states demonstrated in Storybook
 
-👁 password toggle
+Examples:
 
-Storybook shows all states
-
-**Examples:**
 ![Input Clearable 1](./screenshots/input-clearable-1.png)
 ![Input Clearable 2](./screenshots/input-clearable-2.png)
 ![Input Password Hidden](./screenshots/input-password-hide.png)
 ![Input Password Visible](./screenshots/input-password-visible.png)
 ![Input Text](./screenshots/input-text.png)
 
+---
 
-2️⃣ Toast
-Supports types: success | error | info | warning
+### Toast
+Supported types:
+- `success`
+- `error`
+- `info`
+- `warning`
 
-Auto-dismiss after duration
+Features:
+- Auto-dismiss after configurable duration
+- Optional close button
+- Smooth fade / slide animation
+- Controlled via props
 
-Optional close button
+Examples:
 
-Smooth animation (fade/slide)
-
-**Examples:**
 ![Toast Error](./screenshots/toast-error.png)
 ![Toast Info](./screenshots/toast-info.png)
 ![Toast Success](./screenshots/toast-success.png)
 
+---
 
-3️⃣ Sidebar Menu
-Slides in from the right
+### Sidebar Menu
+Features:
+- Slides in from the right
+- Supports nested menu items (accordion style)
+- Overlay click closes the menu
+- Fully controlled via `isOpen` and `onClose`
 
-Supports nested items (accordion)
+Examples:
 
-Overlay closes menu when clicked
+![Sidebar Menu Example 1](./screenshots/sidebar-1.png)
+![Sidebar Menu Example 2](./screenshots/sidebar-2.png)
 
-Controlled via isOpen + onClose
+---
 
-**Examples:**
-![Sidebar 1](./screenshots/sidebar-1.png)
-![Sidebar 2](./screenshots/sidebar-2.png)
+## ⚙️ Technical Details
+- React + TypeScript
+- Storybook for component documentation
+- CSS Modules for styling
+- Controlled components pattern
+- Safe optional callbacks (`onClose?.()`)
 
+---
 
-⚙️ Technical Details
-React + TypeScript
+## 📦 Project Structure
 
-Storybook for component demonstration
-
-CSS Modules for styling
-
-Optional chaining for safe function calls (onClose?.())
-
-📦 Project Structure
-
+```
 src/
 ├── components/
 │   ├── Input/
@@ -89,5 +104,7 @@ src/
 │   └── Toast/
 ├── stories/
 └── main.tsx
+
 screenshots/
 └── *.png
+```
