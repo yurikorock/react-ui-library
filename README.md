@@ -34,7 +34,12 @@ clearable — clear button
 
 Storybook shows all states
 
-Examples: "./screenshots/input-clearable-1.png", "./screenshots/input-clearable-2.png", "./screenshots/input-passwod-hide.png", "./screenshots/input-passwor-visible.png", "./screenshots/input-text.png"
+**Examples:**
+![Input Clearable 1](./screenshots/input-clearable-1.png)
+![Input Clearable 2](./screenshots/input-clearable-2.png)
+![Input Password Hidden](./screenshots/input-password-hide.png)
+![Input Password Visible](./screenshots/input-password-visible.png)
+![Input Text](./screenshots/input-text.png)
 
 
 2️⃣ Toast
@@ -46,7 +51,10 @@ Optional close button
 
 Smooth animation (fade/slide)
 
-Examples: "./screenshots/toast-error.png", "./screenshots/toast-info.png", "./screenshots/toast-success.png" 
+**Examples:**
+![Toast Error](./screenshots/toast-error.png)
+![Toast Info](./screenshots/toast-info.png)
+![Toast Success](./screenshots/toast-success.png)
 
 
 3️⃣ Sidebar Menu
@@ -58,7 +66,9 @@ Overlay closes menu when clicked
 
 Controlled via isOpen + onClose
 
-Examples: "./screenshots/sidebar-1.png", "./screenshots/sidebar-2.png"
+**Examples:**
+![Sidebar 1](./screenshots/sidebar-1.png)
+![Sidebar 2](./screenshots/sidebar-2.png)
 
 
 ⚙️ Technical Details
